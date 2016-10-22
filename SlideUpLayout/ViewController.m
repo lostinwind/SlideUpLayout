@@ -18,6 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 100, screenWidth, screenWidth*.6)];
+    imageView.image = [UIImage imageNamed:@"Image"];
+    [self.view addSubview:imageView];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(8, 40, 200, 40)];
+    label.textColor = [UIColor grayColor];
+    label.font = [UIFont fontWithName:UIFontSlantTrait size:20];
+    label.text = @"这只是个标题";
+    [self.view addSubview:label];
+    
     self.slideLayout = [[BottomSlideLayout alloc]initWithFrame:CGRectMake(0, screenHeight/2, screenWidth, screenHeight)];
     
     self.slidePoint = CGPointMake(self.slideLayout.center.x, self.slideLayout.center.y);
